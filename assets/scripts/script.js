@@ -18,7 +18,7 @@ continuar.addEventListener('click', continuarTempo)
 resetar.addEventListener('click', resetarTempo)
 
 function start() {
-
+    isPause = false;
     interval = setInterval(() => {
         if (!isPause) {
             milisegundos += 10
@@ -63,10 +63,16 @@ function continuarTempo() {
 }
 
 function resetarTempo() {
-    isPause = true
+    clearInterval(interval)
+
+    minutos = 0
+    segundos = 0
+    milisegundos = 0
+
     milisegundosHTML.textContent = '000'
     segundosHTML.textContent = '00'
     minutosHTML.textContent = '00'
+
     pausar.style.display = 'none'
     iniciar.style.display = 'block'
     continuar.style.display = 'none'
