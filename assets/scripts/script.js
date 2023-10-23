@@ -47,7 +47,13 @@ function formatTime(time) {
 }
 
 function formatMilisegundos(mili) {
-    return mili < 100 ? `0${mili}` : mili
+    if (mili >= 100) {
+        return mili
+    } else if (mili >= 10) {
+        return `0${mili}`
+    } else if (mili == 0) {
+        return `00${mili}`
+    }
 }
 
 function pause() {

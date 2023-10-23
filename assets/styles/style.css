@@ -19,15 +19,17 @@ body {
 }
 
 #container {
-    transform: translateY(-70px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
 }
 
 #tempo {
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    justify-content: space-between;
     font-size: 4.5em;
-    gap: 20px;
 }
 
 .time {
@@ -38,6 +40,11 @@ body {
 #milisegundos {
     font-size: .5em;
     transform: translateY(13px);
+}
+
+.divisores {
+    position: relative;
+    top: 3px;
 }
 
 #botoes {

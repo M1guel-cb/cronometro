@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+/*
+Device Breakpoints 
+- Pequenas telas: até 600px 
+- Celular: 600px até 768px 
+- Tablet: 769px até 992px 
+- Desktop: 992px até 1200px 
+- Grandes telas: acima de 1200px
+*/
+
+@media screen and (max-width: 600px) {
+    h1 {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 0;
+        font-size: 2.2em;
+    }
+    #tempo {
+        font-size: 3em;
+    }
+    #container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #botoes {
+        flex-direction: column;
+    }    
+    h1 {
+        font-size: 1.2em;
+    }
+}
